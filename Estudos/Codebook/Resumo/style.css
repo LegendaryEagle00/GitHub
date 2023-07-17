@@ -1,60 +1,77 @@
 /* COMENTÁRIO
-Em CSS, é possível comentar trechos de código e ignorar definições de propriedades embrulhando o conteúdo desconsiderado na notação /* conteúdo comentado */*/
-p {
-color: red;
+Em CSS, é possível comentar trechos de código e ignorar definições de propriedades embrulhando o conteúdo desconsiderado na notação /* conteúdo comentado */
+*/ p {
+    color: red;
 }
+
 #premium {
-color: gold;
+    color: gold;
 }
+
 .authorized {
-color: green;
+    color: green;
 }
 
 .crash-orange {
-color: #ff6522;
+    color: #ff6522;
 }
+
 .spyro-purple {
-color: rgb(156,53,186);
+    color: rgb(156, 53, 186);
 }
-.meu-titulo{
-font-family: "Arial Narrow";
-font-size: 20px;
-font-weight: 700;
-font-style: italic;
-text-decoration: line-through;
+
+.meu-titulo {
+    font-family: "Arial Narrow";
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+    text-decoration: line-through;
 }
+
 /* Alinhamentos */
 .menu {
     text-align: left;
     /*text-align: _____; (usar palavra reservada: left | center | right | justify)*/
 
 }
+
 .destaque {
-text-align: center; /* alinhamento centralizado */
-font-weight: 900; /* espessura da fonte */
+    text-align: center;
+    /* alinhamento centralizado */
+    font-weight: 900;
+    /* espessura da fonte */
 }
+
 .rodape {
-text-align: right; /* alinhamento à direita */
-font-size: 12px; /* tamanho da fonte */
+    text-align: right;
+    /* alinhamento à direita */
+    font-size: 12px;
+    /* tamanho da fonte */
 }
+
 .texto {
-text-align: justify; /* alinhamento justificado */
-font-style: italic; /* estilo da fonte */
+    text-align: justify;
+    /* alinhamento justificado */
+    font-style: italic;
+    /* estilo da fonte */
 }
 
 /* necessário para as bordas da tabela  */
-table, th, td {
+table,
+th,
+td {
     border: 1px solid black;
     border-collapse: collapse;
 }
 
 .title {
-color: white;
-background: black;
+    color: white;
+    background: black;
 }
+
 .red {
-color: red;
-background: white;
+    color: red;
+    background: white;
 }
 
 /* DIMENSÕES
@@ -64,19 +81,21 @@ height: _____px; (tamanho em pixels | porcentagem da página)
 width: _____%; (tamanho em pixels | porcentagem da página)*/
 
 .quadrado {
-background: fuchsia;
-height: 90px;
-width: 90px;
+    background: fuchsia;
+    height: 90px;
+    width: 90px;
 }
+
 .horizontal {
-background: yellow;
-height: 90px;
-width: 100%;
+    background: yellow;
+    height: 90px;
+    width: 100%;
 }
+
 .vertical {
-background: aqua;
-height: 180px;
-width: 90px;
+    background: aqua;
+    height: 180px;
+    width: 90px;
 }
 
 /* Bordas
@@ -101,17 +120,18 @@ border-left: _____px   _____   _____ (notação reduzida que define a borda esqu
 
 
 .circulo {
-border-width: 6px;
-border-style: double; 
-border-color: purple;
-border-radius: 50%;
-height: 60px;
-width: 60px;
+    border-width: 6px;
+    border-style: double;
+    border-color: purple;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
 }
+
 .banner {
-border: 2px dashed orange;
-height: 50px;
-width: 100%;
+    border: 2px dashed orange;
+    height: 50px;
+    width: 100%;
 }
 
 /* CONTORNOS
@@ -126,9 +146,9 @@ Com a notação reduzida, podemos customizar o contorno em uma única linha.
 outline: _____px   _____   _____ (espessura em pixels + estilo + cor) */
 
 .banner {
-background: seashell;
-border: 10px inset deeppink;
-outline: 10px outset deepskyblue;
+    background: seashell;
+    border: 10px inset deeppink;
+    outline: 10px outset deepskyblue;
 }
 
 /* ESPAÇAMENTO
@@ -152,27 +172,142 @@ margin: _____px   _____px (margem cima/baixo, direita/esquerda)
 
 Para entender como margem, borda e preenchimento são usados para calcular as dimensões de elementos, as ilustrações de box model abaixo podem ajudar. */
 .box1 {
-margin: 30px ;
-padding: 70px ;
-border: 20px solid #9C59D1;
+    margin: 30px;
+    padding: 70px;
+    border: 20px solid #9C59D1;
 }
+
 .box2 {
-margin: 90px ;
-padding: 0px ;
-border: 30px solid #9C59D1;
+    margin: 90px;
+    padding: 0px;
+    border: 30px solid #9C59D1;
 }
+
 .box3 {
-margin: 0px ;
-padding: 40px ;
-border: 40px solid #9C59D1;
+    margin: 0px;
+    padding: 40px;
+    border: 40px solid #9C59D1;
 }
+
 .box4 {
-margin: 0px ;
-padding: 0px ;
-border: 50px solid #9C59D1;
+    margin: 0px;
+    padding: 0px;
+    border: 50px solid #9C59D1;
 }
+
 .box5 {
-margin: 40px ;
-padding: 60px ;
-border: 0px solid #9C59D1;
+    margin: 40px;
+    padding: 60px;
+    border: 0px solid #9C59D1;
+}
+
+/* DISPLAY
+Do lado CSS das coisas, blocos (<div>) e trechos (<span>) podem ser compreendidos (e também ter suas apresentações padrão alteradas) através da propriedade display.
+
+display: _____; (block | inline | inline-block | none)
+
+block é um bloco que ocupa uma linha toda, mas pode ter width e height alteradas
+inline é um trecho de linha, que não pode ter width e height alteradas
+inline-block é um trecho de linha, mas que pode ter width e height alteradas
+none oculta o elemento da página */
+
+.red {
+    background: #e40303;
+    height: 20px;
+}
+
+.orange {
+    background: #ff8c00;
+    display: inline-block;
+    height: 80px;
+    width: 130px;
+}
+
+.yellow {
+    background: #ffed00;
+    display: inline;
+    /* width e height são inefetivos em div inline */
+}
+
+.green {
+    background: #008026;
+    /* width e height são inefetivos em span inline (padrão) */
+}
+
+.blue {
+    background: #004dff;
+    display: inline-block;
+    width: 130px;
+}
+
+.purple {
+    background: #750787;
+    display: block;
+    height: 100px;
+    width: 100px;
+}
+
+/*POSICIONAMENTO
+A propridade position permite especificar o método de posicionamento que desejamos usar: static (comportamento padrão), relative, absolute ou fixed.
+
+Ao usar métodos diferentes do padrão, é preciso utilizar as propriedades que definem coordenadas: top (cima), right (direita), bottom (baixo) e left (esquerda).*/
+
+/* STATIC
+Até agora, vimos que elementos são posicionados em blocos (de cima-para-baixo) e em trechos (ocupando as linhas da esquerda-para-direita). Esse método de posicionamento é o static (padrão) e, aqui, as coordenadas não são consideradas. */
+.box {
+    display: inline-block;
+    margin: 10px;
+    width: 70px;
+    height: 70px;
+    outline: 5px dashed black;
+}
+
+.cat {
+    position: static;
+}
+
+/* RELATIVE
+Com o posicionamento relative, podemos ajustar a posição do elemento em relação a sua posição original, de acordo com os pixels definidos em top, right, bottom e left. As posições dos elementos vizinhos não são afetadas pela mudança. */
+.rat {
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+
+.mouse {
+    position: relative;
+    bottom: 20px;
+    right: 5px;
+}
+
+/* ABSOLUTE
+No posicionamento absolute, podemos ajustar a posição do elemento com relação ao seu "elemento pai posicionado" (um elemento com posicionamento não-static). Caso esse elemento "referencial" não exista, as dimensões da própria tela são consideradas. Os elementos vizinhos tem suas posições reajustadas pela mudança. */
+
+.container {
+    position: relative;
+    background: darkviolet;
+    padding: 10px;
+}
+
+.rabbit {
+    position: absolute;
+    top: -80px;
+    right: 0px;
+}
+
+.poodle {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+/* FIXED
+O posicionamento fixed permite ajustar a posição de um elemento com relação as dimensões da própria tela. É o mesmo comportamento de absolute quando não há "referencial" e os elementos vizinhos também tem suas posições reajustadas. */
+
+.monkey {
+    position: fixed;
+    bottom: 0;
+    left: 20%;
+    outline: none;
+    /* o macaco escapou! */
 }
