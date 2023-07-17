@@ -1,0 +1,24 @@
+.color-palette {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.color {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 50%;
+    text-align: center;
+    color: #FFF;
+}
+
+.color-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

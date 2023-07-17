@@ -1,0 +1,897 @@
+OLÁ!
+Boas-vindas ao CodeBook!
+
+Aqui você pode aprender os fundamentos básicos de HTML e CSS, tecnologias utilizadas para construir praticamente todas as coisas que você encontra na internet (como esse tutorial) e também criar as suas primeiras páginas web.
+
+ESTRUTURA
+HTML (Hypertext Markup Language) é a linguagem usada para definir a estrutura do conteúdo de uma página, declarando elementos como parágrafos, imagens, listas, links, tabelas, botões e outros.
+
+ELEMENTOS
+Para definir os elementos que compõe uma página web, utilizamos tags: estruturas compostas por "palavras reservadas" que representam diferentes elementos.
+
+Tags são escritas seguindo a estrutura: abertura (<>), conteúdo e fechamento (</>)
+
+<elemento> conteúdo </elemento>
+O conteúdo de um página web é o conteúdo do elemento <body>
+
+<body>
+    conteúdo
+</body>
+PARÁGRAFO
+Os blocos de texto que você lê nesse guia estão dentro de elementos <p>
+
+<p>Os blocos de texto que você lê nesse guia...</p>
+SEPARADOR
+O elemento <hr/> renderiza um separador na página. Note que, diferente do parágrafo, esse elemento "fecha em si mesmo", pois não aceita nenhum conteúdo.
+
+COMENTÁRIO
+Quando queremos ocultar algum trecho de código, por ser algo relevante apenas pra quem desenvolve, usamos comentários para não renderizar os elementos demarcados. A notação para comentários em HTML é <!-- conteúdo comentado -->
+
+<!-- <p>o que estiver aqui não aparece na página</p> -->
+
+TEXTOS
+Além de paragráfos, podemos usar outros elementos para demarcar textos especiais.
+
+CABEÇALHO
+As tags <h1>, <h2>, <h3>, <h4>, <h5> e<h6> são usadas para representar títulos e subtítulos, sendo que o nível 1 é o mais alto e o 6 o mais baixo.
+
+<h1>H1</h1> <h2>H2</h2> ... <h6>H6</h6>
+H1
+H2
+H3
+H4
+H5
+H6
+NEGRITO E ITÁLICO
+Podemos destacar ou dar ênfase a blocos de texto usando negrito (<b> ou <strong>) ou itálico (<i> ou <em>). Combine tags e crie destaques.
+
+<p>Combine <i>tags</i> e crie <b>destaques</b>.</p>
+LINHA
+O elemento <br/> é usado para pular linhas. Assim como o separador, esse elemento é "autosuficiente" já que não faz sentido uma quebra de linha possuir conteúdo.
+
+<p>— onde você mora?<br/>— na outra rua</p>
+— onde você mora?
+— na outra rua
+
+
+
+RECURSOS
+É possível referenciar recursos disponíveis na internet, como links e imagens.
+
+LINKS
+Para incluir um link para outra página da internet, usamos a tag <a href=""> ... </a>, onde href é um atributo que espera como valor o endereço de destino.
+
+Atributos são "palavras reservadas" escritas dentro das tags de abertura de elementos e que seguem o padrão atributo="valor"
+
+Caso queira abrir a página numa outra janela, adicione o atributo target="_blank"
+
+<p>
+  clique 
+  <a href="https://www.google.com" target="_blank">aqui</a>
+  para fazer sua busca :)
+</p>
+clique aqui para fazer sua busca :)
+
+IMAGENS
+Para adicionar imagens, usamos a tag <img/> acompanhada do atributo src="" com o endereço da imagem. O atributo alt="" define um texto alternativo para a imagem, tornando o conteúdo acessível por leitores de tela. Já o atributo title="" define a mensagem que aparece ao colocar o cursor do mouse sobre a imagem.
+
+<img alt="ícone do CodeBook" title="CodeBook" src="https://fernandomachado90.github.io/codebook/favicon-96x96.png" />
+ícone do CodeBook
+Assim como a quebra de linha <br/>, o elemento <img/> não aceita conteúdo.
+
+
+ESTILOS
+CSS (Cascading Style Sheet) é a linguagem responsável por definir o estilo das páginas, descrevendo regras que definem a forma como elementos serão exibidos.
+
+Numa analogia com o corpo humano podemos dizer que, enquanto o HTML é o esqueleto que estrutura as partes do corpo, o CSS é a pele, os panos e os acessórios.
+
+PROPRIEDADE
+A estrutura de declaração de estilos é propriedade: valor. Por exemplo, para definir a cor de um texto como vermelho, declaramos o estilo:
+
+color: red;
+Essa declaração pode feita de duas formas: por elemento ou criando regras gerais.
+
+ELEMENTO + STYLE
+Ao adicionar o atributo style="" em qualquer elemento HTML, podemos definir estilos válidos somente para seu conteúdo.
+
+<body>
+  <p style="color: red;">esse parágrafo é vermelho</p>
+  <p>já esse não é</p>
+  <p>esse também não</p>
+  <p style="color: blue;">esse parágrafo é azul</p>
+  <p>mais um parágrafo padrão</p>
+  <p style="color: red;">e mais um parágrafo vermelho</p>
+</body>
+esse parágrafo é vermelho
+
+já esse não é
+
+esse também não
+
+esse parágrafo é azul
+
+mais um parágrafo padrão
+
+e mais um parágrafo vermelho
+
+REGRAS
+Criando um elemento <style> ou com um arquivo dedicado (aba CSS no editor ⌨️), podemos definir regras de estilos válidas para todos os elementos de nossa página.
+
+SELETORES
+Para definir regras gerais, precisamos utilizar seletores: marcações que referenciam os atributos id="" e class="" ou a própria tag do elemento.
+
+A estrutura de cada regra é seletor { estilos... }
+
+Para selecionar elementos, basta escrever o nome da própria tag. Para selecionar um id, usamos # e para selecionar classe, usamos .
+
+Nomes de ids e classes devem ser escolhidos de acordo com a utilidade da regra. Enquanto id só pode aparecer uma vez por página, classes aparecem múltiplas vezes.
+
+<style>
+  p {
+    color: red;
+  }
+  #premium {
+    color: gold;
+  }
+  .authorized {
+    color: green;
+  }
+</style>
+<body>
+  <p>pendente</p>
+  <p id="premium">premium</p>
+  <p class="authorized">autorizado</p>
+  <p>pendente</p>
+  <p class="authorized">autorizado</p>
+</body>
+pendente
+
+premium
+
+autorizado
+
+pendente
+
+autorizado
+
+
+COMENTÁRIO
+Em CSS, é possível comentar trechos de código e ignorar definições de propriedades embrulhando o conteúdo desconsiderado na notação /* conteúdo comentado */.
+
+<style>
+  p {
+    /*
+    color: pink; 
+    ... tudo que estiver escrito aqui dentro será ignorado
+    */
+
+    /* color: hotpink; somente essa linha será ignorada */
+
+    color: deeppink;
+  }
+</style>
+
+<body>
+  <p>qual será meu tom de rosa?</p>
+</body>
+qual será meu tom de rosa?
+
+ORES
+Alterando o valor da propriedade color, podemos customizar a cor de nossos textos.
+
+color: _____; (palavra reservada para cor | código hexadecimal | código RGB)
+
+black silver gray white maroon red purple fuchsia green lime olive yellow navy blue teal aqua orange aliceblue antiquewhite aquamarine azure beige bisque blanchedalmond blueviolet brown burlywood cadetblue chartreuse chocolate coral cornflowerblue cornsilk crimson cyan darkblue darkcyan darkgoldenrod darkgray darkgreen darkgrey darkkhaki darkmagenta darkolivegreen darkorange darkorchid darkred darksalmon darkseagreen darkslateblue darkslategray darkslategrey darkturquoise darkviolet deeppink deepskyblue dimgray dimgrey dodgerblue firebrick floralwhite forestgreen gainsboro ghostwhite gold goldenrod greenyellow grey honeydew hotpink indianred indigo ivory khaki lavender lavenderblush lawngreen lemonchiffon lightblue lightcoral lightcyan lightgoldenrodyellow lightgray lightgreen lightgrey lightpink lightsalmon lightseagreen lightskyblue lightslategray lightslategrey lightsteelblue lightyellow limegreen linen magenta mediumaquamarine mediumblue mediumorchid mediumpurple mediumseagreen mediumslateblue mediumspringgreen mediumturquoise mediumvioletred midnightblue mintcream mistyrose moccasin navajowhite oldlace olivedrab orangered orchid palegoldenrod palegreen paleturquoise palevioletred papayawhip peachpuff peru pink plum powderblue rosybrown royalblue saddlebrown salmon sandybrown seagreen seashell sienna skyblue slateblue slategray snow springgreen steelblue tan thistle tomato turquoise violet wheat whitesmoke yellowgreen rebeccapurple
+
+Além das palavras reservadas, você pode usar cores customizadas usando códigos hexadecimais ou RGB. Use este seletor para encontrar o código da cor: 
+
+.crash-orange {
+  color: #ff6522;
+}
+.spyro-purple {
+  color: rgb(156,53,186);
+}
+<p class="crash-orange">crash orange</p>
+<p class="spyro-purple">spyro purple</p>
+crash orange
+
+spyro purple
+
+FONTES
+Além de alterar a cor, podemos customizar nossos textos com diversas propriedades.
+
+TIPO
+font-family: _____; (nomes das fontes, em ordem de preferência; entre aspas se há espaço)
+
+Arial | "Comic Sans MS" | Courier | Tahoma | "Times New Roman"
+
+TAMANHO
+font-size: _____px; (tamanho da fonte, em pixels)
+
+8px | 16px | 24px | 32px
+
+NEGRITO
+font-weight:_____; (espessura da fonte, um valor entre 0 e 900)
+
+100 | 300 | 500 | 700 | 900
+
+ITÁLICO
+font-style: _____; (tipo de itálico, usar palavra reservada)
+
+normal | italic | oblique
+
+SUBLINHADO
+text-decoration: _____; (tipo de sublinhado, usar palavra reservada)
+
+underline | overline | line-through
+
+.meu-titulo {
+  font-family: "Arial Narrow";
+  font-size: 20px;
+  font-weight: 700;
+  font-style: italic;
+  text-decoration: line-through;
+}
+<p class=".meu-titulo">título perigosamente customizado</p>
+título perigosamente customizado
+
+
+ALINHAMENTOS
+Podemos definir um alinhamento horizontal para o texto contido em um elemento, como por exemplo, um parágrafo usando essa propriedade:
+
+text-align: _____; (usar palavra reservada: left | center | right | justify)
+
+.menu {
+  text-align: left;
+}
+.destaque {
+  text-align: center;
+  font-weight: 900;
+}
+.rodape {
+  text-align: right;
+  font-size: 12px;
+}
+.texto {
+  text-align: justify;
+  font-style: italic;
+}
+
+<p class="destaque">MANCHETE</p>
+<p class="menu">item a<br/>item b<br/>item c</p>
+<p class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+<p class="rodape">© 2021</p>
+MANCHETE
+
+item a
+item b
+item c
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+
+LISTAS
+O HTML oferece dois tipos de lista: listas ordenadas (<ol>) ou desordenadas (<ul>), que devem ser usadas de acordo com o propósito da lista. Para cada item a ser incluído, é preciso incluir elementos list-item (<li>) como conteúdo de <ol> ou <ul>.
+
+<h4>Guacamole</h4>
+<ul>
+  <li>1 abacate brasileiro médio (ou 4 avocados)</li>
+  <li>1 tomate grande sem sementes</li>
+  <li>1 cebola pequena</li>
+  <li>2 dentes de alho bem socados</li>
+  <li>1 maço de coentro</li>
+  <li>suco de 1 limão grande</li>
+  <li>sal, pimenta e azeite</li>
+</ul>
+<ol>
+  <li>Amasse o abacate com um garfo, acrescente o alho socado, o suco de limão, sal e azeite a gosto e misture como um purê.</li>
+  <li>Pique a cebola, o tomate e o coentro. Pique bem a pimenta.</li>
+  <li>Acrescente os ingredientes picados ao "purê" de abacate.</li>
+  <li>Sirva com chips, crackers, tacos, no burrito ou mesmo junto com arroz e feijão.</li>
+</ol>
+GUACAMOLE
+1 abacate brasileiro médio (ou 4 avocados)
+1 tomate grande sem sementes
+1 cebola pequena
+2 dentes de alho bem socados
+1 maço de coentro
+suco de 1 limão grande
+sal, pimenta e azeite
+Amasse o abacate com um garfo, acrescente o alho socado, o suco de limão, sal e azeite a gosto e misture como um purê.
+Pique a cebola, o tomate e o coentro. Pique bem a pimenta.
+Acrescente os ingredientes picados ao "purê" de abacate.
+Sirva com chips, crackers, tacos, no burrito ou mesmo junto com arroz e feijão.
+
+TABELAS
+Para certos conteúdos, como calendários semanais ou bancos de dados, pode ser interessante apresentar os dados em formato de tabela.
+
+O elemento <table> define a tabela. Dentro da tabela, para cada linha é criado um elemento table-row (<tr>), seguido de elementos table-data (<td>) para cada item da linha. Opcionalmente, usar elementos table-header (<th>) para definir itens títulos.
+
+/* necessário para as bordas (mais sobre border à seguir) */
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+<table>
+  <tr>
+    <th>Horário</th>
+    <th>Atividade</th>
+    <th>Responsável</th>
+  </tr>
+  <tr>
+    <td>14:30 - 15:00</td>
+    <td>Aula sobre tabelas</td>
+    <td><i>(à confirmar)</i></td>
+  </tr>
+  <tr>
+    <td>15:30 - 15:45</td>
+    <td>Intervalo</td>
+    <td>—</td>
+  </tr>
+  <tr>
+    <td>15:45 - 16:45</td>
+    <td>Exercícios</td>
+    <td>Paulo Freire</td>
+  </tr>
+</table>
+Horário	Atividade	Responsável
+14:30 - 15:00	Aula sobre tabelas	(à confirmar)
+15:30 - 15:45	Intervalo	—
+15:45 - 16:45	Exercícios	Paulo Freire
+
+CONTAINERS
+Para organizar o código ou aplicar estilos uniformes em seções da página, podemos usar elementos "containers" de dois tipos: blocos (<div>) ou trechos (<span>)
+
+Enquanto os blocos ocupam a linha inteira, os trechos tem a dimensão definida pelo seu conteúdo, como o número de caracteres de um texto.
+
+Para visualizar os containers, podemos usar a propriedade background em seu estilo.
+
+background: _____; (palavra reservada para cor | código hexadecimal | código RGB)
+
+.title {
+  color: white;
+  background: black;
+}
+.red {
+  color: red;
+  background: white;
+}
+
+<div class="title">
+  a última palavra será <span class="red">vermelha</span>
+</div>
+a última palavra será vermelha
+
+SEMÂNTICA
+Usando blocos (<div>), trechos (<span>) e estilos CSS, podemos construir praticamente qualquer coisa na web. No entanto, é considerado boa prática usar elementos que garantam a semântica da página, isto é, não apenas definam sua aparência, mas também indiquem seu propósito ou sentido. Por exemplo:
+
+Usar <strong> e <em> (ao invés de <b> e <i>) para indicar ênfase
+Usar títulos e subtítulos <h1>, <h2>,<h3>,<h4>, <h5>, <h6>
+Usar <header> para definir o cabeçalho da página
+Usar <nav> para agrupar elementos de navegação, como menus
+Usar <article> para artigos e textos principais
+Usar <section> para dividir conteúdo em seções
+Usar <figure> para agrupar imagens e legendas
+Usar <footer> para definir o rodapé da página
+
+DIMENSÕES
+Elementos em bloco, como <div>, <img> e <table>, podem ter suas dimensões customizadas através das propriedades height (altura) e width (largura).
+
+height: _____px; (tamanho em pixels | porcentagem da página)
+width: _____%; (tamanho em pixels | porcentagem da página)
+
+.quadrado {
+  background: fuchsia;
+  height: 90px;
+  width: 90px;
+}
+.horizontal {
+  background: yellow;
+  height: 90px;
+  width: 100%;
+}
+.vertical {
+  background: aqua;
+  height: 180px;
+  width: 90px;
+}
+
+<div class="quadrado">//</div>
+<div class="horizontal"></div>
+<div class="vertical"></div>
+//
+
+
+
+BORDAS
+Com a propriedade border (e suas variantes), podemos adicionar bordas internas aos elementos, isso é, bordas que se somam as larguras e alturas definidas nos elementos.
+
+border-width: _____px (espessura em pixels)
+border-style: _____ (dotted | dashed | solid | double | groove | ridge | inset | outset | none)
+border-color: _____ (palavra reservada para cor | código hexadecimal | código RGB)
+border-radius: _____px (curvatura em pixels | curvatura em porcentagem)
+
+Com a notação reduzida, podemos customizar a borda em uma única linha.
+
+border: _____px   _____   _____ (espessura em pixels + estilo + cor)
+
+Adicionando o sufixo -lado ao fim da propriedade, customizamos apenas esse lado.
+
+border-width-top: _____px (espessura em pixels da borda superior)
+border-style-right: _____ (palavra reservada que define o estilo da borda direita)
+border-color-bottom: _____ (cor da borda inferior)
+border-left: _____px   _____   _____ (notação reduzida que define a borda esquerda)
+
+.circulo {
+  border-width: 6px;
+  border-style: double; 
+  border-color: purple;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+}
+.banner {
+  border: 2px dashed orange;
+  height: 50px;
+  width: 100%;
+}
+
+<div class="circulo"></div>
+<div class="banner"><h3>mensagem impactante</h3></div>
+
+CONTORNOS
+Com a propriedade outline (e variantes), adicionamos contornos aos elementos. Diferente de bordas, contornos são decorações externas que não ocupam espaço.
+
+outline-width: _____px (espessura em pixels)
+outline-style: _____ (dotted | dashed | solid | double | groove | ridge | inset | outset | none)
+outline-color: _____ (palavra reservada para cor | código hexadecimal | código RGB)
+
+Com a notação reduzida, podemos customizar o contorno em uma única linha.
+
+outline: _____px   _____   _____ (espessura em pixels + estilo + cor)
+
+.banner {
+  background: seashell;
+  border: 10px inset deeppink;
+  outline: 10px outset deepskyblue;
+}
+
+<div class="banner"></div><br/><br/>
+<div class="banner">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+<br/><br/>
+<div class="banner"><h1>Lorem ipsum</h1></div>
+
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+LOREM IPSUM
+
+ESPAÇAMENTO
+Ao lado de largura, altura e bordas, as dimensões resultantes de elementos são definidas pelas propriedades margin (margem, a distância externa a borda) e padding (um preenchimento transparente interno a borda).
+
+margin: _____px (distância externa em pixels)
+padding: _____px (preenchimento interno em pixels)
+
+Assim como bordas e contornos, o sufixo -lado pode ser adicionado para definir margens e preenchimentos específicos para cada lado.
+
+margin-top: _____px (margem superior)
+margin-bottom: _____px (margem inferior)
+padding-left: _____px (preenchimento à esquerda)
+padding-right: _____px (preenchimento à direita)
+
+Além disso, com a notação reduzida, podemos definir múltiplos lados de uma vez.
+
+margin: _____px   _____px   _____px   _____px (margem cima, direita, baixo, esquerda)
+padding: _____px   _____px   _____px (preenchimento cima, direita/esquerda, baixo)
+margin: _____px   _____px (margem cima/baixo, direita/esquerda)
+
+Para entender como margem, borda e preenchimento são usados para calcular as dimensões de elementos, as ilustrações de box model abaixo podem ajudar.
+
+.box {
+  margin: 30px;
+  padding: 70px;
+  border: 20px solid #9C59D1;
+}
+<div class="box">conteúdo</div>
+margin (30px)
+border (20px)
+padding (70px)
+conteúdo
+.box {
+  margin: 90px;
+  padding: 0px;
+  border: 30px solid #9C59D1;
+}
+<div class="box">conteúdo</div>
+margin (90px)
+border (30px)
+padding (0px)
+conteúdo
+.box {
+  margin: 0px;
+  padding: 40px;
+  border: 40px solid #9C59D1;
+}
+<div class="box">conteúdo</div>
+margin (0px)
+border (40px)
+padding (40px)
+conteúdo
+.box {
+  margin: 0px;
+  padding: 0px;
+  border: 50px solid #9C59D1;
+}
+<div class="box">conteúdo</div>
+margin (0px)
+border (50px)
+padding (0px)
+conteúdo
+.box {
+  margin: 40px;
+  padding: 60px;
+  border: 0px solid #9C59D1;
+}
+<div class="box">conteúdo</div>
+margin (40px)
+border (0px)
+padding (60px)
+
+
+
+
+DISPLAY
+Do lado CSS das coisas, blocos (<div>) e trechos (<span>) podem ser compreendidos (e também ter suas apresentações padrão alteradas) através da propriedade display.
+
+display: _____; (block | inline | inline-block | none)
+
+block é um bloco que ocupa uma linha toda, mas pode ter width e height alteradas
+inline é um trecho de linha, que não pode ter width e height alteradas
+inline-block é um trecho de linha, mas que pode ter width e height alteradas
+none oculta o elemento da página
+div block "padrão" (20 x 100%, ocupa uma linha inteira)
+div inline-block (80 x 130, compartilha linha)div inline (dimensões do conteúdo, compartilha linha) span inline "padrão" (dimensões do conteúdo, compartilha linha) span inline-block (conteúdo x 130, compartilha linha)
+span block (100 x 100, mesmo assim ocupa uma linha inteira)
+.red {
+  background: #e40303;
+  height: 20px;
+}
+.orange {
+  background: #ff8c00;
+  display: inline-block;
+  height: 80px;
+  width: 130px;
+}
+.yellow {
+  background: #ffed00;
+  display: inline;
+  /* width e height são inefetivos em div inline */
+}
+.green {
+  background: #008026;
+  /* width e height são inefetivos em span inline (padrão) */
+}
+.blue {
+  background: #004dff;
+  display: inline-block;
+  width: 130px;
+}
+.purple {
+  background: #750787;
+  display: block;
+  height: 100px;
+  width: 100px;
+}
+<div style="outline: 3px dashed black; color: white;">
+  <div class="red">div block "padrão"</div>
+  <div class="orange">div inline-block</div>
+  <div class="yellow">div inline</div>
+  <span class="green">span inline "padrão"</span>
+  <span class="blue">span inline-block</span>
+  <span class="purple">span block</span>
+</div>
+
+
+POSICIONAMENTO
+A propridade position permite especificar o método de posicionamento que desejamos usar: static (comportamento padrão), relative, absolute ou fixed.
+
+Ao usar métodos diferentes do padrão, é preciso utilizar as propriedades que definem coordenadas: top (cima), right (direita), bottom (baixo) e left (esquerda).
+
+STATIC
+Até agora, vimos que elementos são posicionados em blocos (de cima-para-baixo) e em trechos (ocupando as linhas da esquerda-para-direita). Esse método de posicionamento é o static (padrão) e, aqui, as coordenadas não são consideradas.
+
+.box {
+  display: inline-block;
+  margin: 10px;
+  width: 70px;
+  height: 70px;
+  outline: 5px dashed black;
+}
+.cat {
+  position: static; /* redundante, pois o padrão é static */
+}
+
+<div class="box cat">🐈</div>
+<div class="box cat">🐈</div>
+<div class="box cat">🐈</div>
+🐈🐈🐈
+
+RELATIVE
+Com o posicionamento relative, podemos ajustar a posição do elemento em relação a sua posição original, de acordo com os pixels definidos em top, right, bottom e left. As posições dos elementos vizinhos não são afetadas pela mudança.
+
+.rat {
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+.mouse {
+  position: relative;
+  bottom: 20px;
+  right: 5px;
+}
+
+<div class="box cat">🐈</div>
+<div class="box rat">🐀</div>
+<div class="box cat">🐈</div>
+<div class="box mouse">🐁</div>
+<div class="box cat">🐈</div>
+🐈🐀🐈🐁🐈
+
+ABSOLUTE
+No posicionamento absolute, podemos ajustar a posição do elemento com relação ao seu "elemento pai posicionado" (um elemento com posicionamento não-static). Caso esse elemento "referencial" não exista, as dimensões da própria tela são consideradas. Os elementos vizinhos tem suas posições reajustadas pela mudança.
+
+.container {
+  position: relative;
+  background: darkviolet;
+  padding: 10px;
+}
+.rabbit {
+  position: absolute;
+  top: -80px;
+  right: 0px;
+}
+.poodle {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+<div class="container">
+  <div class="box cat">🐈</div>
+  <div class="box rabbit">🐇</div>
+  <div class="box poodle">🐩</div>
+  <div class="box cat">🐈</div>
+</div>
+🐈🐇🐩🐈
+
+FIXED
+O posicionamento fixed permite ajustar a posição de um elemento com relação as dimensões da própria tela. É o mesmo comportamento de absolute quando não há "referencial" e os elementos vizinhos também tem suas posições reajustadas.
+
+.monkey {
+  position: fixed;
+  bottom: 0;
+  left: 20%;
+  outline: none; /* o macaco escapou! */
+}
+
+<div class="box cat">🐈</div>
+<div class="box monkey">🐒</div>
+<div class="box cat">🐈</div>
+🐈🐒🐈
+
+
+
+FORMULÁRIOS
+Dentro de uma seção demarcada por <form>, podemos incluir elementos como campos de texto, caixas de seleção e botões que permitem interação com a página.
+
+<input type=" " /> (campo de entrada, atributos variam de acordo com o type="")
+<label for=" " /> (rótulo que se conecta ao campo input com id indicado em for="")
+
+TEXTOS
+Os tipos mais simples de <input> são text (texto puro), email (validação de emails), password (oculta senhas por segurança) e search (indicado para filtros).
+
+Para uso com rótulos, é preciso incluir um id="" correspondente ao <label for="">. Já o atributo name="" define o nome do campo a ser enviado pelo formulário.
+
+O atributo required pode ser usado para tornar um campo obrigatório.
+
+<form style="background: turquoise;">
+  <p>
+    <label for="nome">Nome:</label>
+    <input type="text" name="nome" id="nome" required />
+  </p>
+  <p>
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" required />
+  </p>
+  <p>
+    <label for="senha">Senha:</label>
+    <input type="password" name="senha" id="senha" required/>
+  </p>
+  <p>
+    <label for="busca">Busca:</label>
+    <input type="search" name="busca" id="busca" />
+  </p>
+</form>
+Nome: 
+
+Email: 
+
+Senha: 
+
+Busca: 
+
+NÚMEROS
+Os tipos number (campo aberto) e range (barra de seleção) aceitam números. O atributo min="" define o valor mínimo válido, o max="" o valor máximo válido e o step="" define o passo no qual o seletor incrementa (e decrementa) valores.
+
+<label for="qtde">Quantidade:</label>
+<input type="number" id="qtde" min="0" max="100" step="5"/>
+
+<label for="instensidade">Intensidade:</label>
+<input type="range" id="instensidade" min="0" max="1000" />
+Quantidade: 
+
+Intensidade: 
+
+SELETORES
+Os seletores radio (única escolha) e checkbox (múltipla escolha) permitem fazer uma seleção entre os diferentes value="" disponíveis.
+
+Enquanto cada opção precisa ter um id="" único correspondente ao <label for="">, o atributo name="" deve ser comum para identificar o mesmo "grupo de escolhas".
+
+Gênero: <br/>
+<input type="radio" name="genero" id="genero-f" value="f"/>
+<label for="genero-f">feminino</label> <br/>
+
+<input type="radio" name="genero" id="genero-m" value="m"/>
+<label for="genero-m">masculino</label> <br/>
+
+<input type="radio" name="genero" id="genero-nb" value="nb"/>
+<label for="genero-nb">não-binário</label> <br/>
+
+Transporte: <br/>
+<input type="checkbox" name="veiculo" id="vb" value="b" />
+<label for="vb">bicicleta</label> <br/>
+
+<input type="checkbox" name="veiculo" id="vc" value="c" />
+<label for="vc">carro</label> <br/>
+
+<input type="checkbox" name="veiculo" id="vo" value="o" />
+<label for="vo">ônibus</label> <br/>
+
+<input type="checkbox" name="veiculo" id="vt" value="t" />
+<label for="vt">táxi</label> <br/>
+Gênero:
+ feminino
+ masculino
+ não-binário
+
+Transporte:
+ bicicleta
+ carro
+ ônibus
+ táxi
+
+O elemento <select> também permite uma única escolha entre <option value="">
+
+<label for="alimentacao">Alimentação:</label>
+<select name="alimentacao" id="alimentacao">
+  <option value="0">sem restrições</option>
+  <option value="1">ovolactovegetariana</option>
+  <option value="2">lactovegetariana</option>
+  <option value="3">ovovegetariana</option>
+  <option value="4">vegetariana estrita</option>
+  <option value="5">vegana</option>
+</select>
+Alimentação: 
+sem restrições
+
+ESPECIAIS
+Há outros tipos de <input>, recomendados para situações específicas e sem garantia de compatibilidade com todo navegador. Podemos listar: color (seleção de cores), time (horário), date (data), datetime-local (data e hora) e file (upload de arquivos).
+
+<label for="cor">Cor:</label>
+<input type="color" name="cor" id="cor" />
+
+<label for="horario">Horário:</label>
+<input type="time" name="horario" id="horario" />
+
+<label for="nascimento">Nascimento:</label>
+<input type="date" name="nascimento" id="nascimento" 
+                   min="1900-01-01" max="2999-12-31" />
+
+<label for="agenda">Agendamento:</label>
+<input type="datetime-local" name="agenda" id="agenda"/>
+
+<label for="anexo">Anexo:</label>
+<input type="file" name="anexo" id="anexo" />
+Cor: 
+
+Horário: 
+--:--
+
+Nascimento: 
+dd/mm/aaaa
+
+Agendamento: 
+dd/mm/aaaa --:--
+
+Anexo: Nenhum arquivo escolhido
+
+BOTÕES
+Para interagir com os dados de um <form>, é preciso incluir botões no formulário.
+
+<input type=" "/> (button: não faz nada | reset: limpa dados | submit: envia formulário)
+<button>...</button> (envia formulário e aceita conteúdo customizável, como imagens)
+
+Nome: 
+ (obrigatório)
+
+Email: 
+ (obrigatório)
+
+Senha: 
+ (obrigatório)
+
+Busca: 
+
+Quantidade: 
+ (entre 0 e 100)
+
+Intensidade: 
+
+Gênero: feminino masculino não-binário
+
+Transporte: bicicleta carro ônibus táxi
+
+Alimentação: 
+sem restrições
+
+Cor: 
+
+Horário: 
+--:--
+
+Nascimento: 
+dd/mm/aaaa
+
+Agendamento: 
+dd/mm/aaaa --:--
+
+Anexo: Nenhum arquivo escolhido
+
+   CodeBookEnviar
+
+...
+  <input type="button" value="Oi!" onClick="alert('Olá!')" />
+  <input type="reset" value="Limpar" />
+  <input type="submit" value="Enviar" />
+  <button><img src="/img.png" alt="CodeBook"/>Enviar</button>
+</form>
+Por padrão, o botão simples type="button" não possui comportamento. Ao clicar no botão Oi!, o código Javascript alert("Olá!") é executado para exibir uma mensagem.
+
+O botão type="reset" limpa todos os dados do form onde está incluído.
+
+Já os botões type="submit" e o <button> tem o mesmo comportamento: enviar os dados dos campos para processamento no servidor. Experimente preencher o formulário e clicar nesses botões para visualizar seus dados na barra de endereços.
+
+VALEU!
+Que bom que chegou até aqui! O que achou do material e da plataforma? Aprendeu algo novo? Tem alguma ideia de como podemos melhorar? Escreva seu feedback!
+
+PRÓXIMOS PASSOS
+Com o que aprendeu até aqui, você já é capaz de criar suas primeiras páginas web. Essa é uma lista de links para seguir estudando HTML, CSS e outras tecnologias:
+
+A Complete Guide to Flexbox (em inglês)
+Guia de Estudos CSS no Trello (em português)
+Perifacode — Repositório com conteúdos gratuitos (em português)
+Para continuar seu trabalho, clique no botão EDIT (canto superior direito) para acessar o CodePen. Crie sua conta e mantenha seu portfólio de páginas web!
+
+CRÉDITOS
+Este guia de estudos foi originalmente desenvolvido entre 2018—2020, em mutirões de trabalho voluntário realizado por pessoas consultoras da ThoughtWorks Brasil envolvidas na construção da Aceleradora Inclusiva, um projeto de educação popular de tecnologia viabilizado por uma parceria entre ThoughtWorks Brasil e PUC-RS.
+
+Em 2021, o material didático foi disponibilizado no CodeBook, uma plataforma de ensino open-source e, desde então, se tornou aberto a contribuições da comunidade.
+
+Essa é uma lista das pessoas que contribuíram até agora:
+
+Fernando Machado (@fernandomarxado)
+Thaiane Braga (@ThaiiBraga)
+

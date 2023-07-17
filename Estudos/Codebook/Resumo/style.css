@@ -1,0 +1,25 @@
+/* COMENTÁRIO
+Em CSS, é possível comentar trechos de código e ignorar definições de propriedades embrulhando o conteúdo desconsiderado na notação /* conteúdo comentado */*/
+p {
+color: red;
+}
+#premium {
+color: gold;
+}
+.authorized {
+color: green;
+}
+
+.crash-orange {
+color: #ff6522;
+}
+.spyro-purple {
+color: rgb(156,53,186);
+}
+.meu-titulo{
+font-family: "Arial Narrow";
+font-size: 20px;
+font-weight: 700;
+font-style: italic;
+text-decoration: line-through;
+}

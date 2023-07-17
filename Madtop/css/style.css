@@ -1,0 +1,43 @@
+header{
+    background-color: #91440d;
+    height: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+
+}
+.logo_menu{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+
+}
+.logo img{
+    width: 250px;
+    height: 250px;
+    margin-right: auto;
+    margin-bottom: 0px;
+}
+.botoes{
+    display: flex;
+    justify-content: space-around;
+    align-items: right;
+    margin: 0 auto;
+    margin-left: 150px;
+}
+.menu_site button{ 
+    background-color: #91440d;
+    border: none;
+    color: #D2B48C;;
+    font-size: auto;
+    padding: 10px 20px;
+    margin: 0 auto;
+    margin-left: auto;    
+}
+span.arrow-down {
+    font-size: 13px;
+}
