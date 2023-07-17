@@ -152,27 +152,27 @@ margin: _____px   _____px (margem cima/baixo, direita/esquerda)
 
 Para entender como margem, borda e preenchimento são usados para calcular as dimensões de elementos, as ilustrações de box model abaixo podem ajudar. */
 .box1 {
-margin: 30px solid yellow;
-padding: 70px solid deeppink;
+margin: 30px ;
+padding: 70px ;
 border: 20px solid #9C59D1;
 }
 .box2 {
-margin: 90px solid yellow;
-padding: 0px solid deeppink;
+margin: 90px ;
+padding: 0px ;
 border: 30px solid #9C59D1;
 }
 .box3 {
-margin: 0px solid yellow;
-padding: 40px solid deeppink;
+margin: 0px ;
+padding: 40px ;
 border: 40px solid #9C59D1;
 }
 .box4 {
-margin: 0px solid yellow;
-padding: 0px solid deeppink;
+margin: 0px ;
+padding: 0px ;
 border: 50px solid #9C59D1;
 }
 .box5 {
-margin: 40px solid yellow;
-padding: 60px solid deeppink;
+margin: 40px ;
+padding: 60px ;
 border: 0px solid #9C59D1;
 }
