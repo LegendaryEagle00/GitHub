@@ -1,0 +1,27 @@
+body {
+    margin: 0px;
+}
+
+.container {
+    background-color: blueviolet;
+    text-align:center;
+    border-left: aqua 5px solid;
+    margin: 10px;
+    display: flex;
+}
+
+.titulos {
+    background-color:crimson;
+    text-align: center;
+    margin-bottom: 0px;
+    padding: 10px;
+    display: flex;
+}
+
+.paragrafos {
+    background-color: black;
+    color: white;
+    font-style: italic;
+    margin-top: 0px;
+    padding: 10px;
+}

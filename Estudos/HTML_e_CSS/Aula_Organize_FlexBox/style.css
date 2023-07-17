@@ -1,0 +1,29 @@
+.flex-container {
+    background-color: burlywood;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.flex-item {
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+.flex-item-1 {
+    flex-grow: 1;
+}
+
+.flex-item-2 {}
+
+.flex-item-3 {}
+
+p {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}

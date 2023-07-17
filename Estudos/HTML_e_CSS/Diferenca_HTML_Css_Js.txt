@@ -1,0 +1,25 @@
+HTML e CSS não sao linguagens de programação.
+
+HTML    -   HyperText Markup Language   -   Linguagem de Marcação
+    Focado em Conteudo
+        Texto
+        Imagem
+        Video
+        Tabela
+        Listas
+        Titulos
+        Paragrafos
+
+CSS     -   Cascading Style Sheets  
+    Focado em Design
+        Cor
+        Posição da Imagem
+        Tamanho da Imagem
+        Sombra
+
+Javascript  -   Linguagem de programação
+    Focado em Interações
+        Menus 
+        Animaçoes
+        PopUps
+        Validaçoes

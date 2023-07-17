@@ -1,0 +1,22 @@
+body{
+    text-align: center;
+    background-color: aquamarine;
+    ;
+}
+
+.botao{
+    background-color: rgb(25, 255, 5);
+    border: 1px solid rgb(0, 26, 255);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+.botao button{
+    background-color: rgb(255, 0, 0);
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
