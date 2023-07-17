@@ -23,3 +23,156 @@ font-weight: 700;
 font-style: italic;
 text-decoration: line-through;
 }
+/* Alinhamentos */
+.menu {
+    text-align: left;
+    /*text-align: _____; (usar palavra reservada: left | center | right | justify)*/
+
+}
+.destaque {
+text-align: center; /* alinhamento centralizado */
+font-weight: 900; /* espessura da fonte */
+}
+.rodape {
+text-align: right; /* alinhamento à direita */
+font-size: 12px; /* tamanho da fonte */
+}
+.texto {
+text-align: justify; /* alinhamento justificado */
+font-style: italic; /* estilo da fonte */
+}
+
+/* necessário para as bordas da tabela  */
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.title {
+color: white;
+background: black;
+}
+.red {
+color: red;
+background: white;
+}
+
+/* DIMENSÕES
+Elementos em bloco, como <div>, <img> e <table>, podem ter suas dimensões customizadas através das propriedades height (altura) e width (largura).
+
+height: _____px; (tamanho em pixels | porcentagem da página)
+width: _____%; (tamanho em pixels | porcentagem da página)*/
+
+.quadrado {
+background: fuchsia;
+height: 90px;
+width: 90px;
+}
+.horizontal {
+background: yellow;
+height: 90px;
+width: 100%;
+}
+.vertical {
+background: aqua;
+height: 180px;
+width: 90px;
+}
+
+/* Bordas
+BORDAS
+Com a propriedade border (e suas variantes), podemos adicionar bordas internas aos elementos, isso é, bordas que se somam as larguras e alturas definidas nos elementos.
+
+border-width: _____px (espessura em pixels)
+border-style: _____ (dotted | dashed | solid | double | groove | ridge | inset | outset | none)
+border-color: _____ (palavra reservada para cor | código hexadecimal | código RGB)
+border-radius: _____px (curvatura em pixels | curvatura em porcentagem)
+
+Com a notação reduzida, podemos customizar a borda em uma única linha.
+
+border: _____px   _____   _____ (espessura em pixels + estilo + cor)
+
+Adicionando o sufixo -lado ao fim da propriedade, customizamos apenas esse lado.
+
+border-width-top: _____px (espessura em pixels da borda superior)
+border-style-right: _____ (palavra reservada que define o estilo da borda direita)
+border-color-bottom: _____ (cor da borda inferior)
+border-left: _____px   _____   _____ (notação reduzida que define a borda esquerda)*/
+
+
+.circulo {
+border-width: 6px;
+border-style: double; 
+border-color: purple;
+border-radius: 50%;
+height: 60px;
+width: 60px;
+}
+.banner {
+border: 2px dashed orange;
+height: 50px;
+width: 100%;
+}
+
+/* CONTORNOS
+Com a propriedade outline (e variantes), adicionamos contornos aos elementos. Diferente de bordas, contornos são decorações externas que não ocupam espaço.
+
+outline-width: _____px (espessura em pixels)
+outline-style: _____ (dotted | dashed | solid | double | groove | ridge | inset | outset | none)
+outline-color: _____ (palavra reservada para cor | código hexadecimal | código RGB)
+
+Com a notação reduzida, podemos customizar o contorno em uma única linha.
+
+outline: _____px   _____   _____ (espessura em pixels + estilo + cor) */
+
+.banner {
+background: seashell;
+border: 10px inset deeppink;
+outline: 10px outset deepskyblue;
+}
+
+/* ESPAÇAMENTO
+Ao lado de largura, altura e bordas, as dimensões resultantes de elementos são definidas pelas propriedades margin (margem, a distância externa a borda) e padding (um preenchimento transparente interno a borda).
+
+margin: _____px (distância externa em pixels)
+padding: _____px (preenchimento interno em pixels)
+
+Assim como bordas e contornos, o sufixo -lado pode ser adicionado para definir margens e preenchimentos específicos para cada lado.
+
+margin-top: _____px (margem superior)
+margin-bottom: _____px (margem inferior)
+padding-left: _____px (preenchimento à esquerda)
+padding-right: _____px (preenchimento à direita)
+
+Além disso, com a notação reduzida, podemos definir múltiplos lados de uma vez.
+
+margin: _____px   _____px   _____px   _____px (margem cima, direita, baixo, esquerda)
+padding: _____px   _____px   _____px (preenchimento cima, direita/esquerda, baixo)
+margin: _____px   _____px (margem cima/baixo, direita/esquerda)
+
+Para entender como margem, borda e preenchimento são usados para calcular as dimensões de elementos, as ilustrações de box model abaixo podem ajudar. */
+.box1 {
+margin: 30px solid yellow;
+padding: 70px solid deeppink;
+border: 20px solid #9C59D1;
+}
+.box2 {
+margin: 90px solid yellow;
+padding: 0px solid deeppink;
+border: 30px solid #9C59D1;
+}
+.box3 {
+margin: 0px solid yellow;
+padding: 40px solid deeppink;
+border: 40px solid #9C59D1;
+}
+.box4 {
+margin: 0px solid yellow;
+padding: 0px solid deeppink;
+border: 50px solid #9C59D1;
+}
+.box5 {
+margin: 40px solid yellow;
+padding: 60px solid deeppink;
+border: 0px solid #9C59D1;
+}
