@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Calculadora BF</title>
+</head>
+
+<body>
+    <div class="fundo">Otavio Augusto
+        <div class="calculadora">
+            <div class="titulo">Calculadora Bf</div>
+            <div class="sexo">
+                <input type="radio" id="masculino" name="genero" value="masculino">
+                <label for="masculino">Masculino</label><br>
+                <input type="radio" id="feminino" name="genero" value="feminino">
+                <label for="feminino">Feminino</label><br>
+            </div>
+            <div class="colher_informacoes">
+                <table>
+                    <tr>
+                        <td><input type="text" name="peso" id="peso"></td>
+                        <td>
+                            <h1>Peso</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="altura" id="altura"></td>
+                        <td>
+                            <h1>Altura</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="pescoco" id="pescoco"></td>
+                        <td>
+                            <h1>Pescoço</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="cintura" id="cintura"></td>
+                        <td>
+                            <h1>Cintura</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="quadril" id="quadril"></td>
+                        <td>
+                            <h1>Quadril</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="abdomen" id="abdomen"></td>
+                        <td>
+                            <h1>Abdômen</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button id="confirmar">Calcular</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Massa Magra</p>
+                        </td>
+                        <td>
+                            <p id="massa_magra"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Gordura</p>
+                        </td>
+                        <td>
+                            <p id="gordura"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>BF</p>
+                        </td>
+                        <td>
+                            <p id="bf"></p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
