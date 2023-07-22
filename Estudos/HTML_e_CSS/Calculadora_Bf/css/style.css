@@ -20,3 +20,75 @@
     padding: 20px;
 
 }
+.sexo{
+    color: violet;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    padding: 15px;
+    width: 500px;
+}
+.sexo input[type="radio"],
+.sexo label {
+    vertical-align: middle;
+    margin-right: 5px;
+    border: none;
+    position: relative;
+}
+
+.texto{
+    color: violet;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+}
+#calcular{
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    padding: 15px;
+    border-radius: 50px;
+    color: black;
+    background-color: rgb(141, 23, 96);
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.textoResultado{
+    color: violet;
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    
+}
+.areaDigitada{
+    color: violet;
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+    position: relative;
+    margin-left: 15px;
+    margin-right: 10px;
+    width: 300px;
+}
+input[type="text"] {
+    font-size: 18px; 
+    padding: 20px;
+    border: 1px solid #ccc; 
+    color: #333;
+    text-align: left;
+}
+
+/* Estilo para o texto padrão nos campos de entrada */
+input[type="text"][value="Digite o Peso em Kg"],
+input[type="text"][value="Digite a Altura em Cm"],
+input[type="text"][value="Digite a Circunferencia do Pescoço"],
+input[type="text"][value="Digite a Circunferencia da Cintura"],
+input[type="text"][value="Digite a Circunferencia do Quadril"],
+input[type="text"][value="Digite a Circunferencia do Abdômen"] {
+    color: #cccccca6; /* Cor cinza */
+}

@@ -12,77 +12,64 @@
     <div class="fundo">Otavio Augusto
         <div class="calculadora">
             <div class="titulo">Calculadora Bf</div>
+            <br>
             <div class="sexo">
                 <input type="radio" id="masculino" name="genero" value="masculino">
-                <label for="masculino">Masculino</label><br>
+                <label for="masculino">Masculino</label>
                 <input type="radio" id="feminino" name="genero" value="feminino">
-                <label for="feminino">Feminino</label><br>
+                <label for="feminino">Feminino</label>
             </div>
+            
             <div class="colher_informacoes">
                 <table>
                     <tr>
-                        <td><input type="text" name="peso" id="peso"></td>
+                        <td><input type="text" name="peso" id="peso" class="areaDigitada"  placeholder="Digite o Peso em Kg"></td>
                         <td>
-                            <h1>Peso</h1>
+                            <h1 class="texto">Peso</h1>
                         </td>
                     </tr>
                     <tr>
-                        <td><input type="text" name="altura" id="altura"></td>
+                        <td><input type="text" name="altura" id="altura" class="areaDigitada"  placeholder="Digite a Altura em Cm"></td>
                         <td>
-                            <h1>Altura</h1>
+                            <h1 class="texto">Altura</h1>
                         </td>
                     </tr>
                     <tr>
-                        <td><input type="text" name="pescoco" id="pescoco"></td>
+                        <td><input type="text" name="pescoco" id="pescoco" class="areaDigitada"  placeholder="Digite a Circunferencia do Pescoço"></td>
                         <td>
-                            <h1>Pescoço</h1>
+                            <h1 class="texto">Pescoço</h1>
                         </td>
                     </tr>
                     <tr>
-                        <td><input type="text" name="cintura" id="cintura"></td>
+                        <td><input type="text" name="cintura" id="cintura" class="areaDigitada"  placeholder="Digite a Circunferencia da Cintura"></td>
                         <td>
-                            <h1>Cintura</h1>
+                            <h1 class="texto">Cintura</h1>
                         </td>
                     </tr>
                     <tr>
-                        <td><input type="text" name="quadril" id="quadril"></td>
+                        <td><input type="text" name="quadril" id="quadril" class="areaDigitada"  placeholder="Digite a Circunferencia do Quadril"></td>
                         <td>
-                            <h1>Quadril</h1>
+                            <h1 class="texto">Quadril</h1>
                         </td>
                     </tr>
                     <tr>
-                        <td><input type="text" name="abdomen" id="abdomen"></td>
+                        <td><input type="text" name="abdomen" id="abdomen" class="areaDigitada"  placeholder="Digite a Circunferencia do Abdômen"></td>
                         <td>
-                            <h1>Abdômen</h1>
+                            <h1 class="texto">Abdômen</h1>
                         </td>
                     </tr>
+                    <br>
                     <tr>
-                        <td colspan="2"><button id="confirmar">Calcular</button></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>Massa Magra</p>
-                        </td>
-                        <td>
-                            <p id="massa_magra"></p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>Gordura</p>
-                        </td>
-                        <td>
-                            <p id="gordura"></p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <p>BF</p>
-                        </td>
-                        <td>
-                            <p id="bf"></p>
-                        </td>
-                    </tr>
+                        <td colspan="2"><button id="calcular" onclick="calcularBF()">Calcular</button></td>
+                        <tr>
+                            <td><p class="textoResultado" id="massa_magra"></p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="textoResultado" id="gordura"></p></td>
+                        </tr>
+                        <tr>
+                            <td><p class="textoResultado" id="bf"></p></td>
+                        </tr>
                 </table>
             </div>
         </div>
