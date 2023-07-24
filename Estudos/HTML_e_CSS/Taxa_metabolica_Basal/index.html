@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macros</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="fundo">
+        <div class="calculadora">
+            <div class="titulo">Calculadora de Macro nutrientes</div>
+            <table>
+                <tr>
+                    <td>
+                        <div class="sexo">
+                            <div class="texto primeiraColuna">Sexo:</div>
+                        </div>
+                    </td>
+                    <td>
+                        <input type="radio" id="masculino" name="genero" value="masculino">
+                        <label for="masculino">Masculino</label>
+
+                        <input type="radio" id="feminino" name="genero" value="feminino">
+                        <label for="feminino">Feminino</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="texto">Idade:</td>
+                    <td><input class="entradas" type="text" name="idade" id="idade"></td>
+                </tr>
+                <tr>
+                    <td class="texto">Altura:</td>
+                    <td><input class="entradas" type="text" name="altura" id="altura"></td>
+                </tr>
+                <tr>
+                    <td class="texto">Peso:</td>
+                    <td><input class="entradas" type="text" name="peso" id="peso"></td>
+                </tr>
+                <tr>
+                    <td class="texto">Bf:</td>
+                    <td><input class="entradas" type="text" name="bf" id="bf"></td>
+                </tr>
+                <tr>
+                    <td class="texto">Quantos de Treinos Semanais:</td>
+                    <td><input class="entradas" type="text" name="diasTreino" id="diasTreino"></td>
+                </tr>
+                <tr>
+                    <td class="texto">Tempo de Treino Diario:</td>
+                    <td><input class="entradas" type="text" name="tempoTreino" id="treino"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="texto">Intensidade do treino:</div>
+                    </td>
+                    <td>
+                        <select class="entradas" name="intensidade" id="intensidadeTreino">
+                            <option value="treinoLeve">Leve - até 50% RM</option>
+                            <option value="treinoModerado">Moderado - de 50% a 80% RM</option>
+                            <option value="treinoIntenso">Intenso - de 80% a 1RM</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="texto">Aerobicos Semanais:</td>
+                    <td><input class="entradas" type="text" name="aerobicoSemana" id="aerobicoSemana"></td>
+                </tr>
+                <tr>
+                    <td class="texto">Tempo de Duraçao do Aerobico:</td>
+                    <td><input class="entradas" type="text" name="duracaoAerobico" id="duracaoAerobico"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="texto">Intensidade do treino Aerobico:</div>
+                    </td>
+                    <td>
+                        <select class="entradas" name="intensidadeAerobico" id="intensidadeAerobico">
+                            <option value="treinoAerobicoLeve">Leve - até 50% BPM Max</option>
+                            <option value="treinoAerobicoModerado">Moderado - de 50% a 70% BPM Max</option>
+                            <option value="treinoAerobicoIntenso">Intenso - de 70% a 90% do BPM Max</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="texto"><label for="objetivo">Objetivo:</label></div>
+                    </td>
+                    <td>
+                        <select class="entradas" id="objetivo" name="objetivo">
+                            <option id="cuttingLeve" value="cuttingLeve">Cutting: Leve - 10% de défict Calorico</option>
+                            <option id="cuttingModerado" value="cuttingModerado">Cutting: Moderado - 20% de défict
+                                Calorico</option>
+                            <option id="cuttingAgressivo" value="cuttingAgressivo">Cutting: Agressivo - 30% de défict
+                                Calorico</option>
+                            <option id="manutencao" value="manutencao">Manutençao do Peso</option>
+                            <option id="bulkingLeve" value="bulkingLeve">Bulking: Leve - 5% de superávit Calorico</option>
+                            <option id="bulkingModerado" value="bulkingModerado">Bulking: Moderado - 10% de superávit
+                                Calorico</option>
+                            <option id="bulkingAgressivo" value="bulkingAgressivo">Bulking: Agressivo - 15% de superávit
+                                Calorico</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div id="tituloDois" class="texto">Divisao de Macro Nutrientes</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="texto">Proteinas:</td>
+                    <td><input class="entradas" type="text" name="proteinas" id="proteinas"></td>
+                </tr>
+                <tr>
+                    <td class="texto">Gorduras:</td>
+                    <td><input class="entradas" type="text" name="Gorduras" id="Gorduras"></td>
+                </tr>
+                <tr>
+                    <td class="texto">Carboidratos:</td>
+                    <td><input class="entradas" type="text" name="carboidratos" id="carboidratos"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button id="calcular" onclick="calcular()">Calcular</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div>
+                            <p class="resultados" id="agua"></p>
+                            <p class="resultados" id="tmb"></p>
+                            <p class="resultados" id="gastoAerobico"></p>
+                            <p class="resultados" id="gastoTreino"></p>
+                            <p class="resultados" id="gastoTotal"></p>
+                            <p class="resultados" id="caloriasParaTrabalhar"></p>
+                            <p class="resultados" id="proteinasResultado"></p>
+                            <p class="resultados" id="gordurasResultado"></p>
+                            <p class="resultados" id="carboidratosResultado"></p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
